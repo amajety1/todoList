@@ -1,0 +1,6 @@
+<ul class="task-list">
+    <% if(locals.listTasks) {%>
+    <% listTasks.forEach(task => { %>
+        <li><input type="checkbox" class="checkbox"><span class="task-item"> <%= task %></span></li>
+    <% });} %>
+</ul>

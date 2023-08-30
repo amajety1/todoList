@@ -1,0 +1,143 @@
+body {
+  background-image: url("/images/wood-background.jpg");
+  background-size: cover;
+  height: 100vh;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.container {
+  position: relative;
+}
+
+.day-notebook {
+  height: 1200px;
+  position: absolute;
+  top: 0;
+  left: 300px;
+  z-index: 1;
+}
+
+.form-group label{
+  font-family: Georgia,  serif;
+}
+
+.form-group input{
+  font-family: 'Gill Sans',sans-serif;
+}
+
+.form-container {
+  position: absolute;
+  left: 530px;
+  top: 200px;
+  z-index: 2; /* Place the form above the image */
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  height: 100px;
+}
+form{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+@font-face {
+  font-family: 'Times New Roman';
+  src: url('path/to/times-new-roman.woff2') format('woff2'),
+       url('path/to/times-new-roman.woff') format('woff');
+}
+
+/* Add this CSS to your stylesheet or style section */
+
+.form-container button {
+  font-family: 'Times New Roman', serif;
+  background-color: rgb(207, 148, 76);
+  height: 40px;
+  border-radius: 30%;
+  cursor: pointer;
+  border: none; /* Remove default border for better appearance */
+  transition: background-color 0.3s ease-in-out; /* Add smooth transition */
+}
+
+.form-container button:hover {
+  background-color: coral; /* Change background color on hover */
+}
+
+/* Add this CSS to your stylesheet or style section */
+
+/* Navbar styles */
+.nav {
+  background-color: darksalmon;
+  width: 350px;
+  color: black;
+  position: absolute;
+  right: 0;
+  z-index: 4;
+}
+
+.nav-item-right {
+  display: inline-block;
+}
+
+.nav-item-left {
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.nav a {
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Change color and add underline when hovering over the navigation links */
+.nav a:hover {
+  color: #6b4402;
+  text-decoration: underline;
+}
+
+.task-list{
+  position: absolute;
+  z-index: 6;
+  list-style: none;
+  left: 500px;
+  top: 500px;
+}
+
+.task-list li{
+  margin-bottom: 10px;
+}
+
+.task-item{
+  font-family: cursive;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.list-title{
+  position: absolute;
+  z-index: 6;
+  left: 575px;
+  top: 420px;
+  /* font-family: 'Georgia', serif;
+  color: #333;
+  font-size: 36px; */
+  font-family: 'Baskerville', serif;
+  color: #4e342e;
+  font-size: 44px;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox:checked + .task-item {
+  text-decoration: line-through;
+  color: #999; /* Change the color to your preference */
+}
+
+.crossed-out {
+  text-decoration: line-through;
+  color: #999;
+}
