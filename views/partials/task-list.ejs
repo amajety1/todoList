@@ -1,6 +1,17 @@
 <ul class="task-list">
+    
     <% if(locals.listTasks) {%>
     <% listTasks.forEach(task => { %>
-        <li><input type="checkbox" class="checkbox"><span class="task-item"> <%= task %></span></li>
+        
+        <li>
+            <form action="/delete" method="post">
+                <input type="hidden" name="listTitle" value="<%= listTitle %>">
+                <input onChange="this.form.submit()" type="checkbox" name="checkbox" value="<%= task._id %>" class="checkbox"><span class="task-item"> <%= task.name %></span>
+            </form>
+            
+            
+        </li>
+        
     <% });} %>
 </ul>
+

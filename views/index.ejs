@@ -1,20 +1,20 @@
 <%- include("partials/header.ejs") %>
-<%- include("partials/nav.ejs") %>
+
 
 
 
 <div class="container">
   <img class="day-notebook" src="/images/notebook-day.png" alt="">
   <div class="form-container">
-    <form action="/submit-home" method="post">
+    <form action="/" method="post">
         <div class="form-group">
             <label for="inputValue">New Item: </label>
             <input type="text" id="inputValue" name="inputValue" placeholder="Type Here">
         </div>
-        <button type="submit" class="btn btn-primary">Add to List</button>
+        <button type="submit" class="btn btn-primary" value="<%= listTitle %>" name="list">Add to List</button>
     </form>
 </div>
-<h1 class="list-title">Today's Tasks</h1>
+<h1 class="list-title"><%= listTitle %></h1>
 <div>
     <%- include("partials/task-list.ejs") %>
 </div>
